@@ -47,7 +47,7 @@ Enhancements
 
 - [**Backwards incompatible**] Switched HTTPCacheMiddleware backend to filesystem (:issue:`541`)
   To restore old backend set `HTTPCACHE_STORAGE` to `scrapy.contrib.httpcache.DbmCacheStorage`
-- Proxy https:// urls using CONNECT method (:issue:`392`, :issue:`397`)
+- Proxy \https:// urls using CONNECT method (:issue:`392`, :issue:`397`)
 - Add a middleware to crawl ajax crawleable pages as defined by google (:issue:`343`)
 - Rename scrapy.spider.BaseSpider to scrapy.spider.Spider (:issue:`510`, :issue:`519`)
 - Selectors register EXSLT namespaces by default (:issue:`472`)
@@ -63,7 +63,7 @@ Enhancements
 - Add a way to skip default Referer header set by RefererMiddleware (:issue:`475`)
 - Do not send `x-gzip` in default `Accept-Encoding` header (:issue:`469`)
 - Support defining http error handling using settings (:issue:`466`)
-- Use moderm python idioms wherever you find legacies (:issue:`497`)
+- Use modern python idioms wherever you find legacies (:issue:`497`)
 - Improve and correct documentation
   (:issue:`527`, :issue:`524`, :issue:`521`, :issue:`517`, :issue:`512`, :issue:`505`,
   :issue:`502`, :issue:`489`, :issue:`465`, :issue:`460`, :issue:`425`, :issue:`536`)
@@ -118,7 +118,7 @@ Enhancements
 - Remove multi spider support from multiple core components
   (:issue:`422`, :issue:`421`, :issue:`420`, :issue:`419`, :issue:`423`, :issue:`418`)
 - Travis-CI now tests Scrapy changes against development versions of `w3lib` and `queuelib` python packages.
-- Add pypy 2.1 to continous integration tests (:commit:`ecfa7431`)
+- Add pypy 2.1 to continuous integration tests (:commit:`ecfa7431`)
 - Pylinted, pep8 and removed old-style exceptions from source (:issue:`430`, :issue:`432`)
 - Use importlib for parametric imports (:issue:`445`)
 - Handle a regression introduced in Python 2.7.5 that affects XmlItemExporter (:issue:`372`)
@@ -188,7 +188,7 @@ List of contributors sorted by number of commits::
 
 - IPython refuses to update the namespace. fix #396 (:commit:`3d32c4f`)
 - Fix AlreadyCalledError replacing a request in shell command. closes #407 (:commit:`b1d8919`)
-- Fix start_requests lazyness and early hangs (:commit:`89faf52`)
+- Fix start_requests laziness and early hangs (:commit:`89faf52`)
 
 0.18.3 (released 2013-10-03)
 ----------------------------
@@ -330,7 +330,7 @@ contributors sorted by number of commits::
 
 - fixes spelling errors in documentation (:commit:`6d2b3aa`)
 - add doc about disabling an extension. refs #132 (:commit:`c90de33`)
-- Fixed error message formatting. log.err() doesn't support cool formatting and when error occured, the message was:    "ERROR: Error processing %(item)s" (:commit:`c16150c`)
+- Fixed error message formatting. log.err() doesn't support cool formatting and when error occurred, the message was:    "ERROR: Error processing %(item)s" (:commit:`c16150c`)
 - lint and improve images pipeline error logging (:commit:`56b45fc`)
 - fixed doc typos (:commit:`243be84`)
 - add documentation topics: Broad Crawls & Common Practies (:commit:`1fbb715`)
@@ -394,7 +394,7 @@ Scrapy changes:
 - nested items now fully supported in JSON and JSONLines exporters
 - added :reqmeta:`cookiejar` Request meta key to support multiple cookie sessions per spider
 - decoupled encoding detection code to `w3lib.encoding`_, and ported Scrapy code to use that mdule
-- dropped support for Python 2.5. See http://blog.scrapy.org/scrapy-dropping-support-for-python-25
+- dropped support for Python 2.5. See http://blog.scrapinghub.com/2012/02/27/scrapy-0-15-dropping-support-for-python-2-5/
 - dropped support for Twisted 2.5
 - added :setting:`REFERER_ENABLED` setting, to control referer middleware
 - changed default user agent to: ``Scrapy/VERSION (+http://scrapy.org)``
@@ -744,7 +744,7 @@ First release of Scrapy.
 
 .. _AJAX crawleable urls: http://code.google.com/web/ajaxcrawling/docs/getting-started.html
 .. _chunked transfer encoding: http://en.wikipedia.org/wiki/Chunked_transfer_encoding
-.. _w3lib: http://https://github.com/scrapy/w3lib
+.. _w3lib: https://github.com/scrapy/w3lib
 .. _scrapely: https://github.com/scrapy/scrapely
 .. _marshal: http://docs.python.org/library/marshal.html
 .. _w3lib.encoding: https://github.com/scrapy/w3lib/blob/master/w3lib/encoding.py

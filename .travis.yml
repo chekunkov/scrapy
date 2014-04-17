@@ -5,11 +5,16 @@ env:
 - TOXENV=precise
 - TOXENV=trunk
 - TOXENV=pypy
+- TOXENV=py33
+- TOXENV=docs
 matrix:
   allow_failures:
   - env: TOXENV=pypy
+  - env: TOXENV=py33
+  - env: TOXENV=docs
 install:
-  - pip install -M tox
+- ./.travis-workarounds.sh
+- pip install tox
 script: tox
 notifications:
   irc:

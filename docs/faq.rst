@@ -20,7 +20,7 @@ In other words, comparing `BeautifulSoup`_ (or `lxml`_) to Scrapy is like
 comparing `jinja2`_ to `Django`_.
 
 .. _BeautifulSoup: http://www.crummy.com/software/BeautifulSoup/
-.. _lxml: http://codespeak.net/lxml/
+.. _lxml: http://lxml.de/
 .. _jinja2: http://jinja.pocoo.org/2/
 .. _Django: http://www.djangoproject.com
 
@@ -172,7 +172,7 @@ the :ref:`topics-signals-ref` to know which ones.
 What does the response status code 999 means?
 ---------------------------------------------
 
-999 is a custom reponse status code used by Yahoo sites to throttle requests.
+999 is a custom response status code used by Yahoo sites to throttle requests.
 Try slowing down the crawling speed by using a download delay of ``2`` (or
 higher) in your spider::
 

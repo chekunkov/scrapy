@@ -15,7 +15,7 @@ simple API for sending attachments and it's very easy to configure, with a few
 :ref:`settings <topics-email-settings>`.
 
 .. _smtplib: http://docs.python.org/library/smtplib.html
-.. _Twisted non-blocking IO: http://twistedmatrix.com/projects/core/documentation/howto/async.html
+.. _Twisted non-blocking IO: http://twistedmatrix.com/documents/current/core/howto/defer-intro.html
 
 Quick example
 =============
@@ -76,7 +76,7 @@ uses `Twisted non-blocking IO`_, like the rest of the framework.
         :param settings: the e-mail recipients
         :type settings: :class:`scrapy.settings.Settings` object
 
-    .. method:: send(to, subject, body, cc=None, attachs=())
+    .. method:: send(to, subject, body, cc=None, attachs=(), mimetype='text/plain')
 
         Send email to the given recipients.
 
@@ -98,6 +98,9 @@ uses `Twisted non-blocking IO`_, like the rest of the framework.
           attachment and ``file_object`` is a readable file object with the
           contents of the attachment
         :type attachs: iterable
+
+        :param mimetype: the MIME type of the e-mail
+        :type mimetype: str
 
 
 .. _topics-email-settings:

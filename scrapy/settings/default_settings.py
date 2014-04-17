@@ -66,8 +66,6 @@ DOWNLOAD_HANDLERS_BASE = {
 
 DOWNLOAD_TIMEOUT = 180      # 3mins
 
-DOWNLOADER_DEBUG = False
-
 DOWNLOADER_HTTPCLIENTFACTORY = 'scrapy.core.downloader.webclient.ScrapyHTTPClientFactory'
 DOWNLOADER_CLIENTCONTEXTFACTORY = 'scrapy.core.downloader.contextfactory.ScrapyClientContextFactory'
 
@@ -168,7 +166,6 @@ LOG_UNSERIALIZABLE_REQUESTS = False
 
 LOGSTATS_INTERVAL = 60.0
 
-MAIL_DEBUG = False
 MAIL_HOST = 'localhost'
 MAIL_PORT = 25
 MAIL_FROM = 'scrapy@localhost'

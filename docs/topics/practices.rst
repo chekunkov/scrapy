@@ -16,7 +16,7 @@ You can use the :ref:`API <topics-api>` to run Scrapy from a script, instead of
 the typical way of running Scrapy via ``scrapy crawl``.
 
 Remember that Scrapy is built on top of the Twisted
-asynchronous networking library, so you need run it inside the Twisted reactor.
+asynchronous networking library, so you need to run it inside the Twisted reactor.
 
 Note that you will also have to shutdown the Twisted reactor yourself after the
 spider is finished. This can be achieved by connecting a handler to the
@@ -158,9 +158,9 @@ classes instead of manually coding them.
 
 	from scrapy.item import DictItem, Field
 
-	def create_item_class(class_name,field_list):
+	def create_item_class(class_name, field_list):
 	    field_dict = {}
 	    for field_name in field_list:
 	        field_dict[field_name] = Field()
 
-	    return type(class_name,DictItem,field_dict)
+	    return type(class_name, (DictItem,), field_dict)
